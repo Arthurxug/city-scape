@@ -7,6 +7,7 @@ import LoadingSpinner from './components/LoadingSpinner';
 
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
+import CommandCenter from './pages/CommandCenter';
 import Delegate from './pages/Delegate';
 import Agents from './pages/Agents';
 import Tasks from './pages/Tasks';
@@ -83,6 +84,7 @@ export default function App() {
         <Route element={<ProtectedLayout />}>
           <Route index element={<Navigate to="/dashboard" replace />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/command-center" element={<CommandCenter />} />
           <Route path="/delegate" element={<Delegate />} />
           <Route path="/agents" element={<Agents />} />
           <Route path="/tasks" element={<Tasks />} />

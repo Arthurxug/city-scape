@@ -2,19 +2,20 @@ import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import {
   LayoutDashboard, Send, Users, ClipboardList,
-  FolderOpen, Plug, Settings, LogOut, ChevronRight,
+  FolderOpen, Plug, Settings, LogOut, ChevronRight, Radar,
 } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import toast from 'react-hot-toast';
 
 const navItems = [
-  { to: '/dashboard',    label: 'Dashboard',    icon: LayoutDashboard },
-  { to: '/delegate',     label: 'Delegate',     icon: Send },
-  { to: '/agents',       label: 'Agents',       icon: Users },
-  { to: '/tasks',        label: 'Task History', icon: ClipboardList },
-  { to: '/assets',       label: 'Assets',       icon: FolderOpen },
-  { to: '/integrations', label: 'Integrations', icon: Plug },
-  { to: '/settings',     label: 'Settings',     icon: Settings },
+  { to: '/dashboard',      label: 'Dashboard',    icon: LayoutDashboard },
+  { to: '/command-center', label: 'Command Ctr',  icon: Radar },
+  { to: '/delegate',       label: 'Delegate',     icon: Send },
+  { to: '/agents',         label: 'Agents',       icon: Users },
+  { to: '/tasks',          label: 'Task History', icon: ClipboardList },
+  { to: '/assets',         label: 'Assets',       icon: FolderOpen },
+  { to: '/integrations',   label: 'Integrations', icon: Plug },
+  { to: '/settings',       label: 'Settings',     icon: Settings },
 ];
 
 export default function Sidebar({ session }) {

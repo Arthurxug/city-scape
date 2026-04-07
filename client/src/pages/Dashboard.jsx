@@ -6,6 +6,7 @@ import { getAgents, getTaskStats, getTasks } from '../lib/api';
 import AgentAvatar from '../components/AgentAvatar';
 import StatusBadge from '../components/StatusBadge';
 import LoadingSpinner from '../components/LoadingSpinner';
+import CommandCenterCore from '../components/CommandCenterCore';
 import toast from 'react-hot-toast';
 
 const statusIcon = { completed: CheckCircle, running: Clock, failed: AlertCircle, pending: Clock };
@@ -76,6 +77,10 @@ export default function Dashboard() {
   const activeAgents = agents.filter(a => a.status === 'active').length;
   const weekTotal = stats?.total || 0;
 
+  // Show command center view
+  return <CommandCenterCore />;
+
+  // Legacy dashboard code below (kept for reference)
   return (
     <div className="p-6 max-w-7xl mx-auto space-y-6">
       {/* Header */}
