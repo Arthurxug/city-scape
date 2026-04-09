@@ -13,10 +13,10 @@ export default function CommandCenterCore() {
     const generateAircraft = () => {
       const aircraft = [];
       const basePositions = [
-        { id: 'AC001', callsign: 'SKY101', altitude: 35000, heading: 045, speed: 480, status: 'cruise' },
+        { id: 'AC001', callsign: 'SKY101', altitude: 35000, heading: 45, speed: 480, status: 'cruise' },
         { id: 'AC002', callsign: 'JET202', altitude: 28000, heading: 180, speed: 510, status: 'cruise' },
         { id: 'AC003', callsign: 'AIR303', altitude: 32000, heading: 270, speed: 490, status: 'cruise' },
-        { id: 'AC004', callsign: 'CARGO04', altitude: 25000, heading: 090, speed: 420, status: 'approach' },
+        { id: 'AC004', callsign: 'CARGO04', altitude: 25000, heading: 90, speed: 420, status: 'approach' },
         { id: 'AC005', callsign: 'MED505', altitude: 10000, heading: 135, speed: 280, status: 'landing' },
       ];
 
